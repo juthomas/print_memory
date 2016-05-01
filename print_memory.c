@@ -6,12 +6,15 @@
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 10:05:08 by exam              #+#    #+#             */
-/*   Updated: 2016/05/01 16:29:25 by juthomas         ###   ########.fr       */
+/*   Updated: 2016/05/01 16:52:34 by juthomas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
+
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
@@ -107,12 +110,22 @@ void	print_memory(const void *addr, size_t size)
 
 int		main(void)
 {
-	int	tab[11] = {0, 23, 150, 255, 12, 16, 21, 42};
+	int i;
+	int	tab[10] = {0, 23, 150, 255, 12, 16, 21, 42};
 	print_memory(tab, sizeof(tab));
 //	print_bytes(tab, sizeof(tab));
-	ft_putstr("\n\n");
-	char tabl[11] = {'e', 'g', 'p', 'q', 'e', 'f'};
-	print_memory(tabl, sizeof(tabl));
-//	print_bytes(tabl, sizeof(tabl));
+//	ft_putstr("\n\n");
+	i = 0;
+	char *retab;
+	retab = (char*)malloc(sizeof(char) * 256);
+	while (i < 256)
+	{
+		retab[i] = i;
+		i++;
+	}
+//	char tabl[11] = {'e', 'g', 'p', 'q', 'e', 'f'};
+	print_memory(retab, 277);
+	
+	//	print_bytes(tabl, sizeof(tabl));
 	return (0);
 }
