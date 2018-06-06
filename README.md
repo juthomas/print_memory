@@ -21,6 +21,7 @@ void	print_memory(const void *addr, size_t size);
 
 
 int	main(void)
+
 {
 
 	int	tab[10] = {0, 23, 150, 255,
