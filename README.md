@@ -1,11 +1,8 @@
 sujet :
 
-Assignment name  : print_memory
-
-Expected files   : print_memory.c
-
-Allowed functions: write
-
+Assignment name  : print_memory 
+Expected files   : print_memory.c 
+Allowed functions: write . 
 --------------------------------------------------------------------------------
 
 Écrire une fonction qui prend (const void *addr, size_t size) et affiche la mémoire pointée comme dans l'exemple.
